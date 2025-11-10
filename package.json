@@ -10,7 +10,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "accepts": "^2.0.0",
     "balanced-match": "^1.0.2",
