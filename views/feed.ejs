@@ -1,0 +1,33 @@
+<section class="appreciation-banner">
+  <h3>💛 Gratitude & Appreciation</h3>
+  <p>
+    Every post here is not just a thought — it’s a note of thanks to The Odin Project community for empowering learners worldwide.  
+    Your lessons, guidance, and encouragement are invaluable.
+  </p>
+</section>
+
+<section class="feed">
+  <h2>Community Feed</h2>
+
+  <form action="/posts" method="POST" class="post-form">
+    <textarea name="content" placeholder="Share your thoughts..." required></textarea>
+    <button type="submit">Post</button>
+  </form>
+
+  <div class="posts">
+    <% if (posts.length === 0) { %>
+      <p>No posts yet — be the first to share your learning journey 💫</p>
+    <% } else { %>
+      <% posts.forEach(post => { %>
+        <div class="post">
+          <h3><%= post.author.username %></h3>
+          <p><%= post.content %></p>
+          <form action="/posts/<%= post._id %>/like" method="POST">
+            <button type="submit">❤️ <%= post.likes.length %></button>
+          </form>
+          <span class="time"><%= new Date(post.createdAt).toLocaleString() %></span>
+        </div>
+      <% }) %>
+    <% } %>
+  </div>
+</section>

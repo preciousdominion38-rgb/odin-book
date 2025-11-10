@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0f0f2d, #01010c);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px #4fc3f7;
+}
+
+header .logo {
+  font-size: 1.6rem;
+  color: #4fc3f7;
+  text-shadow: 0 0 8px #4fc3f7;
+}
+
+nav a {
+  color: #eee;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #4fc3f7;
+}
+
+/* Forms */
+.form-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #4fc3f7;
+  animation: glowIn 1.5s ease;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+input, textarea {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+button {
+  background: #4fc3f7;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #00e5ff;
+}
+
+/* Feed */
+.feed {
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.post-form textarea {
+  resize: none;
+  min-height: 60px;
+}
+
+.posts .post {
+  background: rgba(255, 255, 255, 0.05);
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.post h3 {
+  color: #4fc3f7;
+}
+
+.time {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* Appreciation Banner */
+.appreciation-banner {
+  background: linear-gradient(90deg, #ff7eb3, #ffcf33);
+  color: #071029;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 126, 179, 0.5);
+  text-align: center;
+  animation: pulseGlow 2s ease-in-out infinite alternate;
+}
+
+.appreciation-banner h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px #ff7eb3;
+}
+
+.appreciation-banner p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+/* Tribute Section */
+.tribute {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 20px 40px 20px; /* space for hearts */
+  max-width: 700px;
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 25px #4fc3f7;
+  z-index: 1;
+  animation: glowIn 1.5s ease;
+}
+
+/* Floating hearts canvas */
+#hearts-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Tribute honor box */
+.tribute .honor {
+  background: linear-gradient(135deg, #00d4ff, #ff7eb3);
+  color: #071029;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 126, 179, 0.4);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Back button */
+.tribute .back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: #4fc3f7;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.tribute .back:hover {
+  background: #00e5ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #aaa;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #4fc3f7;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes glowIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 15px rgba(255,126,179,0.3); }
+  100% { box-shadow: 0 0 30px rgba(255,126,179,0.6); }
+}

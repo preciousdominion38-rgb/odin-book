@@ -1,0 +1,19 @@
+<%- include('layout', { body: '' }) %>
+
+<section class="tribute">
+  <!-- Floating hearts canvas -->
+  <canvas id="hearts-canvas"></canvas>
+
+  <h2>💛 A Heartfelt Tribute</h2>
+  <p class="message"><%= message %></p>
+
+  <div class="honor">
+    <p>“Every lesson, every project, and every bug fixed brought me closer to becoming the developer I am today.”</p>
+    <p>— Built with gratitude by <strong>Dominion Precious</strong> ✨</p>
+    <p>Special thanks to <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a> for shaping minds, guiding learners, and creating a global community of developers. You are truly appreciated ❤️</p>
+  </div>
+
+  <a href="/feed" class="back">← Back to Feed</a>
+</section>
+
+<script src="/hearts.js"></script>
